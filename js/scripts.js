@@ -6,3 +6,7 @@ var repository = [
   { name: 'Hypno', height: 1.6, types: ['psychic'] }
 ];
 
+for (var i = 0; i < repository.length; i++) {
+  repository[i].height > 1.2 ? document.write(repository[i].name + " (height: " + repository[i].height + ") - Wow, that’s big! ") : document.write(repository[i].name + " (height: " + repository[i].height + "); ");
+}
+
