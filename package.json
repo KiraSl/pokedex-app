@@ -1,0 +1,23 @@
+{
+  "name": "pokedex-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiraSl/pokedex-app.git"
+  },
+  "author": "KS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiraSl/pokedex-app/issues"
+  },
+  "homepage": "https://github.com/KiraSl/pokedex-app#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
