@@ -1,3 +1,6 @@
+$color-orange: #ffbb00;
+$color-white: #fff;
+
 * {
   box-sizing: border-box;
 }
@@ -6,5 +9,11 @@ body {
   font-family: 'Lato', sans-serif; 
   font-weight: 400;
   font-size: 16px;
-  background-color: #ffbb00;
+  background-color: $color-orange;
+  padding: 20px;
 }
+
+h1 {
+  color: $color-white;
+}
+
