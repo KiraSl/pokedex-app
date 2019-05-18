@@ -7,6 +7,6 @@ var repository = [
 ];
 
 repository.forEach(function(element) {
-  document.write(`<h3>${element.name}</h3>` + `<p>${'height: ' + element.height + ', types: ' + element.types}</p>`);
+  document.write(`<h3>${element.name}</h3>` + `<p>height: ${element.height}, types: ${element.types}</p>`);
 });
 
