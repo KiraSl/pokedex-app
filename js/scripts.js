@@ -6,6 +6,23 @@ var pokemonRepository = (function () {
     { name: 'Infernape', height: 1.2, types: ['fire', 'fighting'] },
     { name: 'Hypno', height: 1.6, types: ['psychic'] }
   ];
+
+  function add(pokemon) {
+    if (typeof pokemon === "object" /*&& Object.keys(pokemon) === ['name', 'height', 'types']*/) {
+      repository.push(pokemon);
+    } else {
+      return 'error';
+    }
+  }
+ 
+  function getAll() {
+    return repository;
+  }
+
+  return {
+    add: add,
+    getAll: getAll
+  };
 })();
 
 repository.forEach(function(element) {
