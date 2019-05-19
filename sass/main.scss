@@ -93,6 +93,12 @@ button {
   padding: 0;
   cursor: pointer;
   text-align: center;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.015);
+  }
 }
 
 .pokemon-list__button {

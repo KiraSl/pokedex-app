@@ -68,7 +68,10 @@ button {
   color: inherit;
   padding: 0;
   cursor: pointer;
-  text-align: center; }
+  text-align: center;
+  transition: all 0.2s; }
+  button:hover, button:focus {
+    transform: scale(1.015); }
 
 .pokemon-list__button {
   padding: 1em;
