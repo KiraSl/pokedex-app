@@ -10,3 +10,24 @@ body {
 
 h1 {
   color: #fff; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 300px auto 300px; }
+
+.page-header {
+  grid-column: span 3;
+  background-color: lightgray; }
+  .page-header h1 {
+    text-align: center; }
+
+.page-content {
+  background-color: lightblue;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3; }
+
+.page-footer {
+  grid-column: span 3;
+  background-color: lightsalmon; }
+  .page-footer p {
+    text-align: center; }
