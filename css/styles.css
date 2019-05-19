@@ -99,3 +99,12 @@ button {
 
 .electric {
   background-color: #f9dc24; }
+
+/*-----Media Queries -----*/
+@media all and (max-width: 375px) {
+  .pokemon-list__button {
+    width: 90%; } }
+
+@media all and (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 0 1fr 0; } }
