@@ -43,3 +43,6 @@ h1 {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
+.pokemon-list__item {
+  margin-bottom: 1rem; }
