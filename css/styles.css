@@ -12,32 +12,35 @@ body {
   background-color: #ffbb00; }
 
 h1 {
-  color: #fff;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   font-size: 48px;
-  font-weight: 700; }
+  font-weight: 700;
+  color: transparent;
+  background-image: linear-gradient(#fb6442, #ffbb00);
+  -webkit-background-clip: text; }
 
 .wrapper {
   display: grid;
   min-height: 100%;
   grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: 100px 1fr 100px; }
+  grid-template-rows: 100px 1fr 50px; }
 
 .page-header {
+  background-color: #fff;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  background-color: lightgray; }
+  border-bottom: 2px solid #ffbb00;
+  border-top: 2px solid #ffbb00; }
 
 .page-content {
-  background-color: lightblue;
+  background-color: #fff;
   grid-column: 2 / 3;
   grid-row: 2 / 3; }
 
 .page-footer {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  background-color: lightsalmon; }
+  background-color: #fb6442; }
 
 .page-header,
 .page-content,
