@@ -28,5 +28,5 @@ var pokemonRepository = (function () {
 pokemonRepository.add({ name: 'Pikachu', height: 0.4, types: ['electric'] });
 
 pokemonRepository.getAll().forEach(function(element) {
-  document.write(`<h3>${element.name}</h3>` + `<p>height: ${element.height}, types: ${element.types}</p>`);
+  /*document.write(`<h3>${element.name}</h3>` + `<p>height: ${element.height}, types: ${element.types}</p>`); */
 });
