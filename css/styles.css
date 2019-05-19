@@ -12,7 +12,11 @@ body {
   background-color: #ffbb00; }
 
 h1 {
-  color: #fff; }
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700; }
 
 .wrapper {
   display: grid;
