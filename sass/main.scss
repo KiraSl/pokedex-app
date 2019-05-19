@@ -22,9 +22,9 @@ h1 {
   grid-template-columns: 200px auto 200px;
 }
 
-.page-header,
-.page-footer {
-  grid-column: 1 / 4;
+.page-header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .page-header {
@@ -40,6 +40,8 @@ h1 {
 }
 
 .page-footer {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
   background-color: lightsalmon;
   height: 10vh;
 }
@@ -56,22 +58,29 @@ h1 {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 90%;
 }
 
 .pokemon-list__item {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
 }
 
 /*-----Buttons-----*/
 
 button {
-  display: block;
+  display: inline-block;
   border: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
   cursor: pointer;
-  padding: 1em;
-
+  text-align: center;
 }
 
 .pokemon-list__button {
-  width: 
+  padding: 0.5em;
+  width: 60%;
+
 }
