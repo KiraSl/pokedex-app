@@ -2,6 +2,11 @@ $color-orange: #ffbb00;
 $color-white: #fff;
 $color-pink: #fb6442;
 $color-blue: #375e97;
+$color-green: #86ac41;
+$color-yellow: #f9dc24;
+$color-brown: #af4425;
+$color-pink-light: #fa6775;
+$color-violet: #9055a2;
 
 
 * {
@@ -87,11 +92,34 @@ button {
   padding: 0;
   cursor: pointer;
   text-align: center;
-  
 }
 
 .pokemon-list__button {
   padding: 1em;
   width: 60%;
+  color: $color-white;
+  letter-spacing: 0.1em;
+}
 
+.water {
+  background-color: $color-blue;
+}
+
+.poison {
+  background-color: $color-violet;
+}
+
+.grass-poison {
+  background-image: linear-gradient(to right, $color-green, $color-violet);
+}
+
+.fire-fighting {
+  background-image: linear-gradient(to right, $color-orange, $color-brown);
+}
+.psychic {
+  background-color: $color-pink-light;
+}
+
+.electric {
+  background-color: $color-yellow;
 }

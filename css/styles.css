@@ -72,4 +72,24 @@ button {
 
 .pokemon-list__button {
   padding: 1em;
-  width: 60%; }
+  width: 60%;
+  color: #fff;
+  letter-spacing: 0.1em; }
+
+.water {
+  background-color: #375e97; }
+
+.poison {
+  background-color: #9055a2; }
+
+.grass-poison {
+  background-image: linear-gradient(to right, #86ac41, #9055a2); }
+
+.fire-fighting {
+  background-image: linear-gradient(to right, #ffbb00, #af4425); }
+
+.psychic {
+  background-color: #fa6775; }
+
+.electric {
+  background-color: #f9dc24; }
