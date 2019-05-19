@@ -29,8 +29,8 @@ h1 {
   background-color: #fff;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  border-bottom: 2px solid #ffbb00;
-  border-top: 2px solid #ffbb00; }
+  border-bottom: 3px solid #ffbb00;
+  border-top: 3px solid #ffbb00; }
 
 .page-content {
   background-color: #fff;
@@ -74,7 +74,8 @@ button {
   padding: 1em;
   width: 60%;
   color: #fff;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1em;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4); }
 
 .water {
   background-color: #375e97; }
