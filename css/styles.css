@@ -79,6 +79,8 @@ button {
   color: #fff;
   letter-spacing: 0.1em;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4); }
+  .pokemon-list__button:hover, .pokemon-list__button:focus {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); }
 
 .water {
   background-color: #375e97; }
