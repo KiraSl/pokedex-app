@@ -16,6 +16,7 @@ h1 {
   color: $color-white;
 }
 
+
 .wrapper {
   display: grid;
   grid-template-columns: 200px auto 200px;
@@ -59,4 +60,18 @@ h1 {
 
 .pokemon-list__item {
   margin-bottom: 1rem;
+}
+
+/*-----Buttons-----*/
+
+button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+
+}
+
+.pokemon-list__button {
+  width: 
 }

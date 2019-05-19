@@ -46,3 +46,10 @@ h1 {
 
 .pokemon-list__item {
   margin-bottom: 1rem; }
+
+/*-----Buttons-----*/
+button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 1em; }
