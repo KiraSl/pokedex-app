@@ -122,12 +122,12 @@ button {
   background-color: $color-violet;
 }
 
-.grass-poison {
-  background-image: linear-gradient(to right, $color-green, $color-violet);
+.grass.poison {
+  background-image: linear-gradient(to right, $color-green 50%, $color-violet 50%);
 }
 
-.fire-fighting {
-  background-image: linear-gradient(to right, $color-orange, $color-brown);
+.fire.fighting {
+  background-image: linear-gradient(to right, $color-orange 50%, $color-brown 50%);
 }
 .psychic {
   background-color: $color-pink-light;

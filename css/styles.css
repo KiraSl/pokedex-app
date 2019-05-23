@@ -88,11 +88,11 @@ button {
 .poison {
   background-color: #9055a2; }
 
-.grass-poison {
-  background-image: linear-gradient(to right, #86ac41, #9055a2); }
+.grass.poison {
+  background-image: linear-gradient(to right, #86ac41 50%, #9055a2 50%); }
 
-.fire-fighting {
-  background-image: linear-gradient(to right, #ffbb00, #af4425); }
+.fire.fighting {
+  background-image: linear-gradient(to right, #ffbb00 50%, #af4425 50%); }
 
 .psychic {
   background-color: #fa6775; }
