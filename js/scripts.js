@@ -1,11 +1,12 @@
 var pokemonRepository = (function () {
   var repository = [
-    { name: 'Wartorle', height: 1, types: ['water'] },
+    /*{ name: 'Wartorle', height: 1, types: ['water'] },
     { name: 'Nidorino', height: 0.9, types: ['poison'] },
     { name: 'Oddish', height: 0.5, types: ['grass', 'poison'] },
     { name: 'Infernape', height: 1.2, types: ['fire', 'fighting'] },
-    { name: 'Hypno', height: 1.6, types: ['psychic'] }
+    { name: 'Hypno', height: 1.6, types: ['psychic'] } */
   ];
+  var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
     if (typeof pokemon === "object" /*&& Object.keys(pokemon) === ['name', 'height', 'types']*/) {
@@ -26,9 +27,9 @@ var pokemonRepository = (function () {
     $listItem.classList.add('pokemon-list__item');
     $button.classList.add('pokemon-list__button');
 
-    pokemon.types.forEach(function (type) {
+    /*pokemon.types.forEach(function (type) {
       $button.classList.add(type);
-    })
+    })*/
 
     $button.innerText = pokemon.name;
     
@@ -43,16 +44,36 @@ var pokemonRepository = (function () {
     console.log(pokemon);
   }
 
+  function loadList() {
+    return fetch(apiUrl).then(function (response) {
+      return response.json();  
+    }).then(function (json) {
+      json.results.forEach(function (item) {
+        var pokemon = {
+          name: item.name,
+          detailsUrl: item.apiUrl
+        };
+        add(pokemon);
+      });
+    }).catch(function (e) {
+      console.error(e);
+    })
+  }
+
+
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    showDetails: showDetails
+    showDetails: showDetails,
+    loadList: loadList
   };
 })();
 
-pokemonRepository.add({ name: 'Pikachu', height: 0.4, types: ['electric'] });
+/*pokemonRepository.add({ name: 'Pikachu', height: 0.4, types: ['electric'] });*/
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 });
