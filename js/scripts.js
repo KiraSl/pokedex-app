@@ -21,9 +21,10 @@ var pokemonRepository = (function () {
     $listItem.classList.add('pokemon-list__item');
     $button.classList.add('pokemon-list__button');
 
+    
     /*pokemon.types.forEach(function (type) {
       $button.classList.add(type);
-    })*/
+    }) */
 
     $button.innerText = pokemon.name;
     
@@ -69,7 +70,6 @@ var pokemonRepository = (function () {
       console.error(e);
     });
   }
-
 
   return {
     add: add,
