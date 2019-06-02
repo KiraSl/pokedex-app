@@ -42,6 +42,7 @@ h1 {
   grid-template-rows: 100px 1fr 50px;
 }
 
+
 .page-header {
   background-color: $color-white;
   grid-column: 2 / 3;
@@ -75,6 +76,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 80%;
+  text-align: center;
 }
 
 .pokemon-list__item {
