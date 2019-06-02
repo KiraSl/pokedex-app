@@ -21,7 +21,7 @@ var pokemonRepository = (function () {
     $listItem.classList.add('pokemon-list__item');
     $button.classList.add('pokemon-list__button');
 
-    
+  
     /*pokemon.types.forEach(function (type) {
       $button.classList.add(type);
     }) */
@@ -42,6 +42,7 @@ var pokemonRepository = (function () {
   }
 
   function loadList() {
+
     return fetch(apiUrl).then(function (response) {
       return response.json();  
     }).then(function (json) {
@@ -61,7 +62,9 @@ var pokemonRepository = (function () {
     var url = item.detailsUrl;
     return fetch(url).then(function (response){
       return response.json();
-    }).then(function (details) {
+    }).then(function (details) { 
+      console.log(details);
+
       //Now we add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
@@ -71,13 +74,16 @@ var pokemonRepository = (function () {
     });
   }
 
+  
+
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
     showDetails: showDetails,
     loadList: loadList,
-    loadDetails: loadDetails
+    loadDetails: loadDetails,
+    repository: repository
   };
 })();
 
