@@ -2,6 +2,19 @@ var pokemonRepository = (function () {
   var repository = [];
   var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
+  var searchBar = document.querySelector('#search-bar');
+  searchBar.addEventListener("input", filterPokemon);
+
+  function filterPokemon(e) {
+    var text = e.target.value.toLowerCase();
+    document.querySelectorAll('.pokemon-list__item').forEach(function (listItem) {
+      var item = listItem.firstChild.textContent;
+      if( item.toLowerCase().indexOf(text) === -1) {
+        listItem.style.display = 'none';
+      }
+    });
+  }
+
   function add(pokemon) {
     if (typeof pokemon === "object" /*&& Object.keys(pokemon) === ['name', 'height', 'types']*/) {
       repository.push(pokemon);
@@ -21,11 +34,6 @@ var pokemonRepository = (function () {
     $listItem.classList.add('pokemon-list__item');
     $button.classList.add('pokemon-list__button');
 
-  
-    /*pokemon.types.forEach(function (type) {
-      $button.classList.add(type);
-    }) */
-
     $button.innerText = pokemon.name;
     
     $listItem.appendChild($button);
@@ -42,7 +50,6 @@ var pokemonRepository = (function () {
   }
 
   function loadList() {
-
     return fetch(apiUrl).then(function (response) {
       return response.json();  
     }).then(function (json) {
@@ -65,7 +72,7 @@ var pokemonRepository = (function () {
     }).then(function (details) { 
       console.log(details);
 
-      //Now we add the details to the item
+      //Now add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = Object.keys(details.types);
@@ -74,7 +81,6 @@ var pokemonRepository = (function () {
     });
   }
 
-  
 
   return {
     add: add,
@@ -87,7 +93,6 @@ var pokemonRepository = (function () {
   };
 })();
 
-/*pokemonRepository.add({ name: 'Pikachu', height: 0.4, types: ['electric'] });*/
 
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon) {
