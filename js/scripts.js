@@ -11,12 +11,12 @@ var pokemonRepository = (function () {
       var item = listItem.firstChild.textContent;
       if( item.toLowerCase().indexOf(text) === -1) {
         listItem.style.display = 'none';
-      }
+      } 
     });
   }
 
   function add(pokemon) {
-    if (typeof pokemon === "object" /*&& Object.keys(pokemon) === ['name', 'height', 'types']*/) {
+    if (typeof pokemon === "object") {
       repository.push(pokemon);
     } else {
       return 'error';
@@ -33,11 +33,10 @@ var pokemonRepository = (function () {
     var $button = document.createElement('button');
     $listItem.classList.add('pokemon-list__item');
     $button.classList.add('pokemon-list__button');
-
     $button.innerText = pokemon.name;
-    
     $listItem.appendChild($button);
     $list.appendChild($listItem);
+    
     $button.addEventListener("click", function() {
       showDetails(pokemon);
     });
@@ -88,8 +87,7 @@ var pokemonRepository = (function () {
     addListItem: addListItem,
     showDetails: showDetails,
     loadList: loadList,
-    loadDetails: loadDetails,
-    repository: repository
+    loadDetails: loadDetails
   };
 })();
 
@@ -99,3 +97,4 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
