@@ -11,7 +11,9 @@ var pokemonRepository = (function () {
       var item = listItem.firstChild.textContent;
       if( item.toLowerCase().indexOf(text) === -1) {
         listItem.style.display = 'none';
-      } 
+      } else {
+        listItem.style.display = '';
+      }
     });
   }
 
@@ -36,7 +38,7 @@ var pokemonRepository = (function () {
     $button.innerText = pokemon.name;
     $listItem.appendChild($button);
     $list.appendChild($listItem);
-    
+
     $button.addEventListener("click", function() {
       showDetails(pokemon);
     });
