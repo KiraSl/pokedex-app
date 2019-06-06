@@ -116,6 +116,13 @@ button {
   max-width: 700px;
   text-align: left; }
 
+.modal-close {
+  float: right;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline; }
+
 .water {
   background-color: #375e97; }
 
