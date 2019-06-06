@@ -32,6 +32,12 @@ h1 {
   border-bottom: 3px solid #ffbb00;
   border-top: 3px solid #ffbb00; }
 
+#search-bar {
+  margin-left: 100px;
+  padding-left: 10px;
+  width: 200px;
+  height: 30px; }
+
 .page-content {
   background-color: #fff;
   grid-column: 2 / 3;
@@ -76,11 +82,39 @@ button {
 .pokemon-list__button {
   padding: 1em;
   width: 100%;
-  color: #fff;
+  color: #375e97;
   letter-spacing: 0.1em;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4); }
   .pokemon-list__button:hover, .pokemon-list__button:focus {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); }
+
+/* ------ MODAL ------ */
+#modal-container {
+  display: none; }
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(251, 100, 66, 0.5);
+  z-index: 999;
+  overflow: auto;
+  display: grid;
+  text-align: center; }
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left; }
 
 .water {
   background-color: #375e97; }
