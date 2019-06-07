@@ -20,8 +20,6 @@ var pokemonRepository = (function () {
   function add(pokemon) {
     if (typeof pokemon === "object") {
       repository.push(pokemon);
-    } else {
-      return 'error';
     }
   }
  
@@ -46,7 +44,7 @@ var pokemonRepository = (function () {
 
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function () {
-      showModal('Modal title', 'Modal content');
+      showModal(item.name, item.height);
     });
   }
 
@@ -104,13 +102,14 @@ var pokemonRepository = (function () {
     var contentElement = document.createElement('p');
     contentElement.innerText = text;
 
+    
+
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(contentElement);
     $modalContainer.appendChild(modal);
 
     $modalContainer.classList.add('is-visible');
-
   }
 
   function hideModal() {
