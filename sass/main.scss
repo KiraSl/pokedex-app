@@ -35,6 +35,10 @@ h1 {
   -webkit-background-clip: text;
 }
 
+h2 {
+  text-transform: capitalize;
+}
+
 .wrapper {
   display: grid;
   min-height: 100%;

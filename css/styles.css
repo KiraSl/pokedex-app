@@ -19,6 +19,9 @@ h1 {
   background-image: linear-gradient(#fb6442, #ffbb00);
   -webkit-background-clip: text; }
 
+h2 {
+  text-transform: capitalize; }
+
 .wrapper {
   display: grid;
   min-height: 100%;
