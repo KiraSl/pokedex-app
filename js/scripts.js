@@ -37,7 +37,10 @@ var pokemonRepository = (function () {
       // Add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.types = Object.keys(details.types);
+      item.types = [];
+      details.types.forEach(function(type) {
+        item.types.push(type.type.name);
+      });
     }).catch(function (e) {
       console.error(e);
     });
@@ -86,8 +89,13 @@ var pokemonRepository = (function () {
     titleElement.innerText = item.name; 
     
      //Add pokemon height and types to the modal
-    var contentElement = document.createElement('p');
-    contentElement.innerText = `Height: ${item.height}m`;
+    var heightSize = document.createElement('p');
+    heightSize.classList.add('green');
+    heightSize.innerText = `Height: ${item.height}m`;
+
+    var typesDescription = document.createElement('p');
+    typesDescription.classList.add('violet');
+    typesDescription.innerText = `Types: ${item.types}`;
 
      //Add pokemon image to the modal
     var imageContainer = document.createElement('div');
@@ -100,8 +108,8 @@ var pokemonRepository = (function () {
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(imageContainer);
-    modal.appendChild(contentElement);
-    
+    modal.appendChild(heightSize);
+    modal.appendChild(typesDescription);
     $modalContainer.appendChild(modal);
   
     $modalContainer.classList.add('is-visible');
