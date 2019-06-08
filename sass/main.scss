@@ -120,6 +120,7 @@ button {
   letter-spacing: 0.1em;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
   text-transform: capitalize;
+  min-width: 150px;
 
   &:hover,
   &:focus  {
@@ -163,11 +164,6 @@ button {
   width: 100%;
   max-width: 400px;
   text-align: center;
-
-  p {
-    color: $color-green;
-    font-weight: 700;
-  }
 }
 
 .modal-close {
@@ -182,32 +178,15 @@ button {
   display: inline-block;
 }
 
-
-
-
-.water {
-  background-color: $color-blue;
+.green {
+  color: $color-green;
+  font-weight: 700;
 }
 
-.poison {
-  background-color: $color-violet;
+.violet {
+  color: $color-violet;
+  font-weight: 700;
 }
-
-.grass.poison {
-  background-image: linear-gradient(to right, $color-green 50%, $color-violet 50%);
-}
-
-.fire.fighting {
-  background-image: linear-gradient(to right, $color-orange 50%, $color-brown 50%);
-}
-.psychic {
-  background-color: $color-pink-light;
-}
-
-.electric {
-  background-color: $color-yellow;
-}
-
 
 /*-----Media Queries -----*/
 @media all and (max-width: 375px) {
@@ -215,6 +194,15 @@ button {
     width: 90%;
   }
 }
+
+@media all and (max-width: 750px) {
+  .pokemon-list__item {
+    margin: 0.2em;
+    display: block;
+    width: 80%;
+  }
+}
+
 
 @media all and (max-width: 900px) {
   .wrapper {

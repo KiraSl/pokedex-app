@@ -89,7 +89,8 @@ button {
   background-color: #86ac41;
   letter-spacing: 0.1em;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  min-width: 150px; }
   .pokemon-list__button:hover, .pokemon-list__button:focus {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); }
 
@@ -120,9 +121,6 @@ button {
   width: 100%;
   max-width: 400px;
   text-align: center; }
-  .modal p {
-    color: #86ac41;
-    font-weight: 700; }
 
 .modal-close {
   float: right;
@@ -134,28 +132,24 @@ button {
 .pokemon-image {
   display: inline-block; }
 
-.water {
-  background-color: #375e97; }
+.green {
+  color: #86ac41;
+  font-weight: 700; }
 
-.poison {
-  background-color: #9055a2; }
-
-.grass.poison {
-  background-image: linear-gradient(to right, #86ac41 50%, #9055a2 50%); }
-
-.fire.fighting {
-  background-image: linear-gradient(to right, #ffbb00 50%, #af4425 50%); }
-
-.psychic {
-  background-color: #fa6775; }
-
-.electric {
-  background-color: #f9dc24; }
+.violet {
+  color: #9055a2;
+  font-weight: 700; }
 
 /*-----Media Queries -----*/
 @media all and (max-width: 375px) {
   .pokemon-list__button {
     width: 90%; } }
+
+@media all and (max-width: 750px) {
+  .pokemon-list__item {
+    margin: 0.2em;
+    display: block;
+    width: 80%; } }
 
 @media all and (max-width: 900px) {
   .wrapper {
