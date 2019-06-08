@@ -85,9 +85,11 @@ button {
 .pokemon-list__button {
   padding: 1em;
   width: 100%;
-  color: #375e97;
+  color: #fff;
+  background-color: #86ac41;
   letter-spacing: 0.1em;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  text-transform: capitalize; }
   .pokemon-list__button:hover, .pokemon-list__button:focus {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); }
 
@@ -116,8 +118,11 @@ button {
   background: #fff;
   padding: 15px;
   width: 100%;
-  max-width: 500px;
-  text-align: left; }
+  max-width: 400px;
+  text-align: center; }
+  .modal p {
+    color: #86ac41;
+    font-weight: 700; }
 
 .modal-close {
   float: right;
@@ -125,6 +130,9 @@ button {
   background: none;
   color: #777;
   text-decoration: underline; }
+
+.pokemon-image {
+  display: inline-block; }
 
 .water {
   background-color: #375e97; }

@@ -115,9 +115,11 @@ button {
 .pokemon-list__button {
   padding: 1em;
   width: 100%;
-  color: $color-blue;
+  color: $color-white;
+  background-color: $color-green;
   letter-spacing: 0.1em;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  text-transform: capitalize;
 
   &:hover,
   &:focus  {
@@ -159,8 +161,13 @@ button {
   background: $color-white;
   padding: 15px;
   width: 100%;
-  max-width: 500px;
-  text-align: left;
+  max-width: 400px;
+  text-align: center;
+
+  p {
+    color: $color-green;
+    font-weight: 700;
+  }
 }
 
 .modal-close {
@@ -171,7 +178,9 @@ button {
   text-decoration: underline;
 }
 
-
+.pokemon-image {
+  display: inline-block;
+}
 
 
 
