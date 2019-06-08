@@ -1,6 +1,6 @@
 var pokemonRepository = (function () {
   var repository = [];
-  var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=152';
 
   function add(pokemon) {
     if (typeof pokemon === "object") {
@@ -87,19 +87,21 @@ var pokemonRepository = (function () {
     
      //Add pokemon height and types to the modal
     var contentElement = document.createElement('p');
-    contentElement.innerText = `Height: ${item.height}`;
+    contentElement.innerText = `Height: ${item.height}m`;
 
      //Add pokemon image to the modal
     var imageContainer = document.createElement('div');
     var image = document.createElement('img');
     image.setAttribute('src', item.imageUrl);
     image.setAttribute('alt', `image of ${item.name}`);
+    image.classList.add('pokemon-image');
     imageContainer.appendChild(image);
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
-    modal.appendChild(contentElement);
     modal.appendChild(imageContainer);
+    modal.appendChild(contentElement);
+    
     $modalContainer.appendChild(modal);
   
     $modalContainer.classList.add('is-visible');
