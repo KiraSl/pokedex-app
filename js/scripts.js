@@ -72,46 +72,26 @@ var pokemonRepository = (function () {
 
   function showModal(item) {
 
-    // Clear all existing modal content 
-    $modalContainer.innerHTML = '';
-
-    var modal = document.createElement('div');
-    modal.classList.add('modal');
-
-    //Create close button 
-    var closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
-    closeButtonElement.innerText = 'Close';
+    //Close button 
+    var closeButtonElement = document.querySelector('.modal-close');
     closeButtonElement.addEventListener('click', hideModal);
 
-    //Add pokemon name to the modal
-    var titleElement = document.createElement('h2');
+    //Show pokemon name 
+    var titleElement = document.querySelector('h2');
     titleElement.innerText = item.name; 
     
-     //Add pokemon height and types to the modal
-    var heightSize = document.createElement('p');
-    heightSize.classList.add('green');
+     //Show pokemon height and types 
+    var heightSize = document.querySelector('.green');
     heightSize.innerText = `Height: ${item.height}m`;
 
-    var typesDescription = document.createElement('p');
-    typesDescription.classList.add('violet');
+    var typesDescription = document.querySelector('.violet');
     typesDescription.innerText = `Types: ${item.types.join(', ')}`;
 
-     //Add pokemon image to the modal
-    var imageContainer = document.createElement('div');
-    var image = document.createElement('img');
+     //Show pokemon image 
+    var image = document.querySelector('.pokemon-image');
     image.setAttribute('src', item.imageUrl);
     image.setAttribute('alt', `image of ${item.name}`);
-    image.classList.add('pokemon-image');
-    imageContainer.appendChild(image);
-
-    modal.appendChild(closeButtonElement);
-    modal.appendChild(titleElement);
-    modal.appendChild(imageContainer);
-    modal.appendChild(heightSize);
-    modal.appendChild(typesDescription);
-    $modalContainer.appendChild(modal);
-  
+    
     $modalContainer.classList.add('is-visible');
   }
 
