@@ -95,7 +95,7 @@ var pokemonRepository = (function () {
 
     var typesDescription = document.createElement('p');
     typesDescription.classList.add('violet');
-    typesDescription.innerText = `Types: ${item.types}`;
+    typesDescription.innerText = `Types: ${item.types.join(', ')}`;
 
      //Add pokemon image to the modal
     var imageContainer = document.createElement('div');
