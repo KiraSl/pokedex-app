@@ -9,7 +9,8 @@ body {
   font-family: 'Asap', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  background-color: #ffbb00; }
+  background-color: #ffbb00;
+  color: #0f0f0f; }
 
 h1 {
   letter-spacing: 0.2em;
@@ -26,7 +27,7 @@ h2 {
   display: grid;
   min-height: 100%;
   grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: 100px 1fr 50px; }
+  grid-template-rows: 100px 1fr 80px; }
 
 .page-header {
   background-color: #fff;
@@ -58,6 +59,14 @@ h2 {
   align-items: center;
   justify-content: center; }
 
+.media-links {
+  text-align: center; }
+  .media-links p {
+    font-size: 10px; }
+  .media-links a {
+    text-decoration: none;
+    color: #fff; }
+
 .pokemon-list {
   list-style-type: none;
   margin: 0;
@@ -80,7 +89,7 @@ button {
   text-align: center;
   transition: all 0.2s; }
   button:hover, button:focus {
-    transform: scale(1.015); }
+    transform: scale(1.01); }
 
 .pokemon-list__button {
   padding: 1em;
@@ -88,11 +97,11 @@ button {
   color: #fff;
   background-color: #86ac41;
   letter-spacing: 0.1em;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   text-transform: capitalize;
   min-width: 150px; }
   .pokemon-list__button:hover, .pokemon-list__button:focus {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); }
+    background-color: #698733; }
 
 /* ------ MODAL ------ */
 #modal-container {
