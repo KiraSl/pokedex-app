@@ -84,8 +84,19 @@ var pokemonRepository = (function () {
     var heightSize = document.querySelector('.green');
     heightSize.innerText = `Height: ${item.height}m`;
 
-    var typesDescription = document.querySelector('.violet');
-    typesDescription.innerText = `Types: ${item.types.join(', ')}`;
+    var typesDescription = document.querySelector('.violet span');
+
+    while (typesDescription.firstChild) {
+      typesDescription.removeChild(typesDescription.firstChild);
+    };
+
+    item.types.forEach( function (type) {
+      var typeSpan = document.createElement('span');
+      typeSpan.classList.add(type);
+      typeSpan.innerHTML = `${type} `;
+      typesDescription.appendChild(typeSpan);
+    });
+    //typesDescription.classList.add(item.types[0]);
 
      //Show pokemon image 
     var image = document.querySelector('.pokemon-image');
