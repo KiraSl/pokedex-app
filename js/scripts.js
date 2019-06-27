@@ -71,7 +71,6 @@ var pokemonRepository = (function () {
   var $modalContainer = document.querySelector('#modal-container');
 
   function showModal(item) {
-
     //Close button 
     var closeButtonElement = document.querySelector('.modal-close');
     closeButtonElement.addEventListener('click', hideModal);
@@ -81,22 +80,23 @@ var pokemonRepository = (function () {
     titleElement.innerText = item.name; 
     
      //Show pokemon height and types 
-    var heightSize = document.querySelector('.green');
+    var heightSize = document.querySelector('.text-green');
     heightSize.innerText = `Height: ${item.height}m`;
 
-    var typesDescription = document.querySelector('.violet span');
+    var typesDescription = document.querySelector('.text-black span');
 
+    //remove type names of the pokemon that was previously cliked on
     while (typesDescription.firstChild) {
       typesDescription.removeChild(typesDescription.firstChild);
     };
 
+    //Charnge text color based on the type name 
     item.types.forEach( function (type) {
       var typeSpan = document.createElement('span');
       typeSpan.classList.add(type);
       typeSpan.innerHTML = `${type} `;
       typesDescription.appendChild(typeSpan);
     });
-    //typesDescription.classList.add(item.types[0]);
 
      //Show pokemon image 
     var image = document.querySelector('.pokemon-image');
