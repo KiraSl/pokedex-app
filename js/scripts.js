@@ -57,7 +57,7 @@ var pokemonRepository = (function () {
     $list.appendChild($listItem);
 
     // Load pokemon details when click on the button with its name
-    $button.addEventListener("click", function() {
+    $button.addEventListener('click', function() {
       showDetails(pokemon);
     });
   }
@@ -71,10 +71,6 @@ var pokemonRepository = (function () {
   var $modalContainer = document.querySelector('#modal-container');
 
   function showModal(item) {
-    //Close button 
-    var closeButtonElement = document.querySelector('.modal-close');
-    closeButtonElement.addEventListener('click', hideModal);
-
     //Show pokemon name 
     var titleElement = document.querySelector('h2');
     titleElement.innerText = item.name; 
@@ -109,6 +105,10 @@ var pokemonRepository = (function () {
   function hideModal() {
     $modalContainer.classList.remove('is-visible');
   }
+
+  //Close button 
+  var closeButtonElement = document.querySelector('.modal-close');
+  closeButtonElement.addEventListener('click', hideModal);
 
   // Close modal on pressing Esc button
   window.addEventListener('keydown', (e) => {
