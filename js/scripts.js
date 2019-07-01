@@ -3,7 +3,7 @@ var pokemonRepository = (function () {
   var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=152';
 
   function add(pokemon) {
-    if (typeof pokemon === "object") {
+    if (typeof pokemon === 'object') {
       repository.push(pokemon);
     } 
   }
@@ -84,7 +84,7 @@ var pokemonRepository = (function () {
     //remove type names of the pokemon that was previously cliked on
     while (typesDescription.firstChild) {
       typesDescription.removeChild(typesDescription.firstChild);
-    };
+    }
 
     //Charnge text color based on the type name 
     item.types.forEach( function (type) {
@@ -127,7 +127,7 @@ var pokemonRepository = (function () {
 
   // Search bar 
   var searchBar = document.querySelector('#search-bar');
-  searchBar.addEventListener("input", filterPokemon);
+  searchBar.addEventListener('input', filterPokemon);
 
   function filterPokemon(e) {
     var text = e.target.value.toLowerCase();
