@@ -11,6 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/KiraSl/pokedex-app.git"
   },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+        "quotes": ["error", "single"]
+    }
+  },
   "author": "KS",
   "license": "ISC",
   "bugs": {
