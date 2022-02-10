@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/KiraSl/pokedex-app#readme",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   }
 }
